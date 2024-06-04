@@ -14,3 +14,7 @@ func (d *Disk) ReadBlock(physicalMemory []int32, blockIndex, memStart int32) {
 		physicalMemory[memStart+i] = block[i]
 	}
 }
+
+func (d *Disk) Write(blockIndex, offset, data int32) {
+	d.blocks[blockIndex][offset] = data
+}
