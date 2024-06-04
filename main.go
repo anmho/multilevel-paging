@@ -13,12 +13,8 @@ import (
 
 func main() {
 	var initPath string
-	var inputPath string
-	var outputPath string
 
 	flag.StringVar(&initPath, "i", "", "initialization file")
-	//flag.StringVar(&inputPath, "i", "", "input file")
-	//flag.StringVar(&outputPath, "o", "", "output file")
 	flag.Parse()
 
 	initFile, err := getFiles(initPath)
@@ -32,10 +28,6 @@ func main() {
 	if err != nil {
 		log.Fatalln(fmt.Errorf("error initializing: %w", err))
 	}
-
-	//initializeSegmentTable(mm, segments)
-	//initializePageTables(mm, pages)
-
 	processInput(mm, os.Stdin, os.Stdout)
 }
 
