@@ -1,46 +1,40 @@
-2024/06/04 20:38:22 this page of this segment is not residing in actual physical memory -31
-2024/06/04 20:38:22 INFO translating va va=0 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:0 PageIndex:0 Offset:0 Bound:0}
-2024/06/04 20:38:22 segment: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment after potential page fault: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment 0 info for page 0 in frame 10 for page table frame 5
-2024/06/04 20:38:22 page table entry: {PageIndex:0 SegmentIndex:0 pageFrameIndex:10}
-2024/06/04 20:38:22 page table entry after potential fault: {PageIndex:0 SegmentIndex:0 pageFrameIndex:10}
-2024/06/04 20:38:22 page table frame index:  5
-2024/06/04 20:38:22 INFO translating va va=512 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:0 Bound:512}
-2024/06/04 20:38:22 segment: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment after potential page fault: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment 0 info for page 1 in frame 8 for page table frame 5
-2024/06/04 20:38:22 page table entry: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
-2024/06/04 20:38:22 page table entry after potential fault: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
-2024/06/04 20:38:22 page table frame index:  5
-2024/06/04 20:38:22 INFO translating va va=522 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:10 Bound:522}
-2024/06/04 20:38:22 segment: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment after potential page fault: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 segment 0 info for page 1 in frame 8 for page table frame 5
-2024/06/04 20:38:22 page table entry: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
-2024/06/04 20:38:22 page table entry after potential fault: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
-2024/06/04 20:38:22 page table frame index:  5
-2024/06/04 20:38:22 ERROR invalid virtual addr va=787456
-2024/06/04 20:38:22 ERROR invalid virtual addr va=787457
-2024/06/04 20:38:22 INFO translating va va=1012 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:500 Bound:1012}
-2024/06/04 20:38:22 segment: {Index:0 pageTableFrameIndex:5 Size:900}
-2024/06/04 20:38:22 INFO translating va va=523776 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:1 PageIndex:511 Offset:0 Bound:261632}
-2024/06/04 20:38:22 segment: {Index:1 pageTableFrameIndex:11 Size:262000}
-2024/06/04 20:38:22 segment after potential page fault: {Index:1 pageTableFrameIndex:11 Size:262000}
-2024/06/04 20:38:22 segment 1 info for page 511 in frame 4 for page table frame 11
-2024/06/04 20:38:22 page table entry: {PageIndex:511 SegmentIndex:1 pageFrameIndex:4}
-2024/06/04 20:38:22 page table entry after potential fault: {PageIndex:511 SegmentIndex:1 pageFrameIndex:4}
-2024/06/04 20:38:22 page table frame index:  11
-2024/06/04 20:38:22 INFO translating va va=524287 "max size"=524288
-2024/06/04 20:38:22 virtual addr: {SegmentIndex:1 PageIndex:511 Offset:511 Bound:262143}
-2024/06/04 20:38:22 segment: {Index:1 pageTableFrameIndex:11 Size:262000}
-2024/06/04 20:38:22 ERROR invalid virtual addr va=524288
-2024/06/04 20:38:22 ERROR invalid virtual addr va=524850
-2024/06/04 20:38:22 ERROR invalid virtual addr va=525312
-2024/06/04 20:38:22 ERROR invalid virtual addr va=525512
-2024/06/04 20:38:22 ERROR invalid virtual addr va=786944
+2024/06/04 20:45:02 INFO translating va va=0 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:0 PageIndex:0 Offset:0 Bound:0}
+2024/06/04 20:45:02 segment: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment after potential page fault: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment 0 info for page 0 in frame 12 for page table frame 10
+2024/06/04 20:45:02 page table entry: {PageIndex:0 SegmentIndex:0 pageFrameIndex:12}
+2024/06/04 20:45:02 page table entry after potential fault: {PageIndex:0 SegmentIndex:0 pageFrameIndex:12}
+2024/06/04 20:45:02 page table frame index:  10
+2024/06/04 20:45:02 INFO translating va va=512 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:0 Bound:512}
+2024/06/04 20:45:02 segment: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment after potential page fault: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment 0 info for page 1 in frame 8 for page table frame 10
+2024/06/04 20:45:02 page table entry: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
+2024/06/04 20:45:02 page table entry after potential fault: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
+2024/06/04 20:45:02 page table frame index:  10
+2024/06/04 20:45:02 INFO translating va va=522 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:10 Bound:522}
+2024/06/04 20:45:02 segment: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment after potential page fault: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 segment 0 info for page 1 in frame 8 for page table frame 10
+2024/06/04 20:45:02 page table entry: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
+2024/06/04 20:45:02 page table entry after potential fault: {PageIndex:1 SegmentIndex:0 pageFrameIndex:8}
+2024/06/04 20:45:02 page table frame index:  10
+2024/06/04 20:45:02 ERROR invalid virtual addr va=787456
+2024/06/04 20:45:02 ERROR invalid virtual addr va=787457
+2024/06/04 20:45:02 INFO translating va va=1012 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:0 PageIndex:1 Offset:500 Bound:1012}
+2024/06/04 20:45:02 segment: {Index:0 pageTableFrameIndex:10 Size:900}
+2024/06/04 20:45:02 INFO translating va va=523776 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:1 PageIndex:511 Offset:0 Bound:261632}
+2024/06/04 20:45:02 segment: {Index:1 pageTableFrameIndex:4 Size:262000}
+2024/06/04 20:45:02 segment after potential page fault: {Index:1 pageTableFrameIndex:4 Size:262000}
+2024/06/04 20:45:02 segment 1 info for page 511 in frame 3 for page table frame 4
+2024/06/04 20:45:02 page table entry: {PageIndex:511 SegmentIndex:1 pageFrameIndex:3}
+2024/06/04 20:45:02 page table entry after potential fault: {PageIndex:511 SegmentIndex:1 pageFrameIndex:3}
+2024/06/04 20:45:02 page table frame index:  4
+2024/06/04 20:45:02 INFO translating va va=524287 "max size"=524288
+2024/06/04 20:45:02 virtual addr: {SegmentIndex:1 PageIndex:511 Offset:511 Bound:262143}
+2024/06/04 20:45:02 segment: {Index:1 pageTableFrameIndex:4 Size:262000}
