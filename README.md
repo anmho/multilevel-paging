@@ -13,7 +13,7 @@
 - `Makefile`:
 - `bin`: Contains the binary executable generated from compilation.
 - `go.mod`: Tracks the package dependencies
-- `go.sum`: Stores the checksums for the dependencies
+- `go.sum`: Stores the checksums for the dependencies to ensure correctness.
 - `main.go`: Main entrypoint. Responsible for parsing inputs, routing commands, and initializing the program.
 - `memory`: Package for memory related tasks for the segmentation and paging system.
   - `address.go`: Contains structs and utilities for virtual address translation.
