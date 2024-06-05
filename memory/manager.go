@@ -2,6 +2,7 @@ package memory
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"github.com/zyedidia/generic/list"
 	"log"
@@ -89,6 +90,9 @@ func (m *Manager) TranslateAddress(virtualAddress uint32) (int32, error) {
 
 	segmentInfo := m.getSegmentInfo(int32(va.SegmentIndex))
 	log.Printf("segment: %+v\n", segmentInfo)
+	if int64(va.Bound) >= int64(segmentInfo.Size) {
+		return -1, errors.New("bound size pw invalid")
+	}
 
 	if !segmentInfo.PageTableIsResident() {
 		// load the frame/block from disk into the page table frame

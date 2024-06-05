@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"github.com/anmho/cs143b/project2/memory"
 	"log"
+	"log/slog"
 	"os"
 	"strconv"
 	"strings"
@@ -47,12 +48,21 @@ func processInput(mm *memory.Manager, in, out *os.File) {
 		switch cmd {
 		case "RP":
 			if len(args) < 2 {
-				log.Fatalln("expected 2 args", args)
+				//log.Fatalln("expected 2 args", args)
+				fmt.Fprintf(out, "-1 ")
+				return
 			}
 
 			physicalAddr, err := strconv.Atoi(args[1])
+
 			if err != nil || physicalAddr < 0 {
-				log.Fatalln("invalid virtual address", args[1])
+				//log.Fatalln("invalid virtual address", args[1])
+				fmt.Fprintf(out, "-1 ")
+				continue
+			}
+			if int64(physicalAddr) >= int64(memory.PhysicalMemorySize) {
+				fmt.Fprintf(out, "-1 ")
+				continue
 			}
 
 			data := mm.ReadPhysical(uint32(physicalAddr))
@@ -64,8 +74,16 @@ func processInput(mm *memory.Manager, in, out *os.File) {
 			}
 			virtualAddr, err := strconv.Atoi(args[1])
 			if err != nil || virtualAddr < 0 {
-				log.Fatalln("invalid virtual address", args)
+				slog.Error("invalid virtual addr", "va", virtualAddr)
+				fmt.Fprintf(out, "-1 ")
+				continue
 			}
+			if int64(virtualAddr) >= int64(memory.PhysicalMemorySize) {
+				slog.Error("invalid virtual addr", "va", virtualAddr)
+				fmt.Fprintf(out, "-1 ")
+				continue
+			}
+			slog.Info("translating va", "va", virtualAddr, "max size", int64(memory.PhysicalMemorySize))
 			physicalAddr, err := mm.TranslateAddress(uint32(virtualAddr))
 			fmt.Fprintf(out, "%d ", physicalAddr)
 		case "NL":
