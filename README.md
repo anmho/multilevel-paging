@@ -1,13 +1,18 @@
+Precompiled executable platform binaries contained in ./bin/project1 (darwin-arm64 and linux-amd64)
+
 # How to run
-1) Install Go 1.22.2
-1) Install packages with `go mod download`
-2) To build run ```make```
+1) Prerequisites: Install Go 1.22.2
+1) Dependencies: Install packages with `go mod download`
+2) Build: 
+   3) To build for current platform run ```make```
+   4) To build only for linux run ```make linux-amd64```
+   5) To build only for MacOS run ```make darwin-arm64```
 3) To run the program enter command: ```./bin/project2 -i <init-file-path> < <input-file-path> > <output-file-path>```
-   - e.g. ```./bin/project2 -i ./rsrc/init-dp.txt < ./rsrc/input-dp.txt > ./rsrc/output-dp.txt```
-4) To run the test input w/o demand paging
-   - ```./bin/project2 -i ./rsrc/init-no-dp.txt < ./rsrc/input-no-dp.txt > ./rsrc/output-no-dp.txt```
-5) To run the test input with demand paging 
-   -```./bin/project2 -i ./rsrc/init-dp.txt < ./rsrc/input-dp.txt > ./rsrc/output-dp.txt```
+- e.g.
+  - To run the test input w/o demand paging
+      - ```./bin/project2 -i ./rsrc/init-no-dp.txt < ./rsrc/input-no-dp.txt > ./rsrc/output-no-dp.txt 2> log.txt```
+  - To run the test input with demand paging
+       -```./bin/project2 -i ./rsrc/init-dp.txt < ./rsrc/input-dp.txt > ./rsrc/output-dp.txt 2> log.txt```
 
 # A list of files in the zip file, with a short description of each one.
 - `Makefile`:
